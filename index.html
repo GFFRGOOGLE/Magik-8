@@ -18,6 +18,7 @@ body.dark::before{opacity:.3}
 h1{font-size:clamp(36px,8vw,64px);font-weight:700;letter-spacing:.14em;margin-bottom:10px;text-shadow:3px 3px 0 rgba(139,32,25,.15);cursor:pointer;transition:transform .2s}
 h1:active{transform:scale(.95)}
 .subtitle{font-family:'Courier New',monospace;font-size:12px;color:var(--ink-soft);letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px}
+.instruction{font-family:'Courier New',monospace;font-size:11px;color:var(--ink-soft);margin-bottom:15px;line-height:1.5;text-transform:uppercase;letter-spacing:.05em}
 .input-group{display:flex;flex-direction:column;gap:12px;width:100%}
 input[type="text"]{width:100%;padding:16px;font-family:Georgia,serif;font-size:18px;color:var(--ink);background:var(--paper-d);border:1px solid var(--frame);box-shadow:inset 2px 2px 0 rgba(58,44,28,.1);outline:none;transition:all .2s}
 input[type="text"]:focus{background:var(--paper);box-shadow:inset 2px 2px 0 rgba(58,44,28,.2), 0 0 0 3px rgba(139,32,25,.1)}
@@ -50,8 +51,12 @@ input[type="text"]::placeholder{color:var(--ink-soft);opacity:.6;font-style:ital
     <h1 id="title">МАГИЧЕСКИЙ ШАР</h1>
     <div class="subtitle">Задай вопрос вселенной</div>
     
+    <div class="instruction">
+        Введи свой вопрос в поле ниже и нажми кнопку.<br>Шар даст случайный ответ.
+    </div>
+    
     <div class="input-group">
-        <input type="text" id="question" placeholder="Например: Куплю ли я сегодня шаурму?" autocomplete="off">
+        <input type="text" id="question" placeholder="Ваш вопрос..." autocomplete="off">
         <button class="btn btn-seal" id="ask-btn">Спросить</button>
     </div>
 
